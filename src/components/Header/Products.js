@@ -10,8 +10,10 @@ const Products = ({ products }) => {
           <li key={index} className="product-card">
             <h4>{product.name}</h4>
             <img src={product.image} alt={product.name} />
+            <div className='product-changes'>
             <Link to={`/view/${index}`}>View</Link>
             <Link to={`/edit/${index}`}>Edit</Link>
+            </div>
           </li>
         ))}
       </ul>

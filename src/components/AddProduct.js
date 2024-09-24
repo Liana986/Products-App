@@ -7,6 +7,7 @@ const AddProduct = ({ onAdd }) => {
   const [description, setDescription] = useState('');
 
   const handleAddProduct = () => {
+    
     if (!name && !image && !price && !description) {
       alert("Please fill in at least one field.");
       return;
