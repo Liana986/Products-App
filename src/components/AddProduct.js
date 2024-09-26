@@ -6,13 +6,22 @@ const AddProduct = ({ onAdd }) => {
   const [price, setPrice] = useState('');
   const [description, setDescription] = useState('');
 
-  const handleAddProduct = () => {
+  const handleAddProduct = (e) => {
+    e.preventDefault();
+    const trimmedName = name.trim();
+    const trimmedImage = image.trim();
+    const trimmedPrice = price.trim();
+    const trimmedDescription = description.trim();
+  
     
-    if (!name && !image && !price && !description) {
+    if (!trimmedName && !trimmedImage && !trimmedPrice && !trimmedDescription) {
       alert("Please fill in at least one field.");
       return;
     }
-    onAdd({ name, image, price, description });
+  
+    onAdd({ name: trimmedName, image: trimmedImage, price: trimmedPrice, description: trimmedDescription });
+    
+    
     setName('');
     setImage('');
     setPrice('');
@@ -24,6 +33,8 @@ const AddProduct = ({ onAdd }) => {
      <div className="add-product">
       <h2>Add Product</h2>
       <div className='inputs'> 
+
+      <form>
       <input
         type="text"
         placeholder="Name"
@@ -47,7 +58,9 @@ const AddProduct = ({ onAdd }) => {
         value={description}
         onChange={(e) => setDescription(e.target.value)}
       />
-      <button onClick={handleAddProduct}>Add Product</button>
+      <button type="submit" onClick={handleAddProduct}>Add Product</button>
+
+      </form>
       </div>
       </div>
 

@@ -66,7 +66,6 @@ h4 {
   font-family: 'Times New Roman', Times, serif;
   font-size: 30px;
   color: #242936;
-  text-decoration-line: underline;
 }
 
 .description-text {
@@ -149,6 +148,7 @@ input, textarea {
   border: 1px solid #ccc; 
   border-radius: 4px; 
   opacity: 0.7;
+  resize: none;
 }
 
 .add-product-container {
@@ -258,6 +258,8 @@ input, textarea {
   padding-top: 10px;
   border: 1px solid #ccc;
   border-radius: 5px;
+  margin: 5px;
+  word-break: break-all;
 }
 
 .product-preview img {
@@ -296,6 +298,7 @@ input, textarea {
   max-width: 300px;
   flex-direction: column;
   opacity: 0.9;
+  word-break: break-all;
 }
 
 .product-card h4 {
@@ -337,6 +340,7 @@ input, textarea {
 .product-view {
   max-width: 600px;
   margin: 2rem auto;
+  padding: 15px;
   border-radius: 8px;
   display: flex;
   align-items: center;
@@ -344,6 +348,7 @@ input, textarea {
   flex-direction: column;
   box-shadow: 1px 1px 9px rgba(0, 0, 0, 0.5);
   opacity: 10;
+  word-break: break-all;
 }
 
 .product-view p {
