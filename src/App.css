@@ -35,7 +35,7 @@ header {
 }
 
 .header-items a {
-  color: #222C43;
+  color: #474545;
   text-decoration: none;
   margin: 0 20px;
   font-weight: 800;
@@ -64,7 +64,7 @@ header {
 h4 {
   font-family: 'Times New Roman', Times, serif;
   font-size: 30px;
-  color: #242936;
+  color: #474545;
 }
 
 .description-text {
@@ -118,7 +118,7 @@ nav a:hover {
 
 h2 {
   font-size: 2rem;
-  color: #222C43;
+  color: #474545;
   margin-top: 3rem;
   margin-bottom: 2rem;
   font-family:Georgia, 'Times New Roman', Times, serif;
@@ -241,7 +241,7 @@ input, textarea {
 
 .product-preview h3 {
   font-size: 30px;
-  color: #222C43;
+  color: #474545;
   font-family: 'Playfair Display', serif;
 }
 
@@ -299,6 +299,7 @@ input, textarea {
   flex-direction: column;
   opacity: 0.9;
   word-break: break-all;
+  background-color: #adadad;
 }
 
 .product-card h4 {
