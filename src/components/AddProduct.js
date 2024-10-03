@@ -13,14 +13,12 @@ const AddProduct = ({ onAdd }) => {
     const trimmedPrice = price.trim();
     const trimmedDescription = description.trim();
   
-    
     if (!trimmedName && !trimmedImage && !trimmedPrice && !trimmedDescription) {
       alert("Please fill in at least one field.");
       return;
     }
   
     onAdd({ name: trimmedName, image: trimmedImage, price: trimmedPrice, description: trimmedDescription });
-    
     
     setName('');
     setImage('');
@@ -35,34 +33,15 @@ const AddProduct = ({ onAdd }) => {
       <div className='inputs'> 
 
       <form>
-      <input
-        type="text"
-        placeholder="Name"
-        value={name}
-        onChange={(e) => setName(e.target.value)}
-      />
-      <input
-        type="text"
-        placeholder="Image URL"
-        value={image}
-        onChange={(e) => setImage(e.target.value)}
-      />
-      <input
-        type="number"
-        placeholder="Price"
-        value={price}
-        onChange={(e) => setPrice(e.target.value)}
-      />
-      <textarea
-        placeholder="Description"
-        value={description}
-        onChange={(e) => setDescription(e.target.value)}
-      />
+      <input type="text" placeholder="Name" value={name} onChange={(e) => setName(e.target.value)}/>
+      <input type="text" placeholder="Image URL" value={image} onChange={(e) => setImage(e.target.value)} />
+      <input type="number" placeholder="Price" value={price} onChange={(e) => setPrice(e.target.value)} />
+      <textarea placeholder="Description" value={description}
+      onChange={(e) => setDescription(e.target.value)} />
       <button type="submit" onClick={handleAddProduct}>Add Product</button>
-
       </form>
       </div>
-      </div>
+    </div>
 
       <div className="product-preview">
         <h3>Preview:</h3>
