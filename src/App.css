@@ -61,6 +61,14 @@ header {
   opacity: 0.9;
 }
 
+
+.no-results {
+  color: #888;
+  font-style: italic;
+  padding: 10px;
+}
+
+
 h4 {
   font-family: 'Times New Roman', Times, serif;
   font-size: 30px;
